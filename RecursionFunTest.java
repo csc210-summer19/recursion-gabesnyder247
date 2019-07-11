@@ -26,6 +26,7 @@ public class RecursionFunTest {
     assertEquals(10, rf.combinations(5, 2));
     // There are 2,598,960 possible poker hands:
     assertEquals(2598960, rf.combinations(52, 5));
+    
   }
 
   @Test
@@ -165,7 +166,7 @@ public class RecursionFunTest {
     intList.addLast(7);
     intList.addLast(3);
     intList.removeAll(3);
-      
+      System.out.println(intList.get(0));
     assertEquals((Integer)5, intList.get(0));
     assertEquals((Integer)7, intList.get(1));  
   }
@@ -180,6 +181,8 @@ public class RecursionFunTest {
     list.duplicateAll("B");
     assertEquals("B", list.get(0));
     assertEquals("B", list.get(1));
+    System.out.println(list.get(1));
+    System.out.println(list.size());
     assertEquals(2, list.size());
   }
 
@@ -213,6 +216,7 @@ public class RecursionFunTest {
     assertEquals("B", list.get(5));
     assertEquals("X", list.get(6));
     assertEquals("A", list.get(7));
+    System.out.println(list.size());
     assertEquals(8, list.size());
   }
 
@@ -228,6 +232,8 @@ public class RecursionFunTest {
     assertEquals(2, top.getStartRow());
     assertEquals(2, top.getStartColumn());
     top.findTheExit();
+    System.out.println("EXIT row - " +  top.getExitRow());
+    System.out.println("EXIT col - " +  top.getExitColumn());
     assertEquals(4, top.getExitRow());
     assertEquals(1, top.getExitColumn());
   }
