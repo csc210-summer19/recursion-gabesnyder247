@@ -73,35 +73,34 @@ public class ObstacleCourse {
 	private boolean findExit(int row, int col) {
 		boolean escaped = false;
 		if (course[row][col] == ' ') {
-			System.out.println("is open");
+			//System.out.println("is open");
 			course[row][col] = TRIED;
 
 			if (isBorder(row, col)) {
-				
+
 				escaped = true;
-				
-			}else {
-				System.out.println("else");
-				escaped = findExit(row+1, col);
-				System.out.println("below");
+
+			} else {
+				//System.out.println("else");
+				escaped = findExit(row + 1, col);
+				//System.out.println("below");
 				if (!escaped) {
-					System.out.println("right");
-					escaped = findExit(row, col+1);
+					//System.out.println("right");
+					escaped = findExit(row, col + 1);
 				}
 				if (!escaped) {
-					System.out.println("up");
+					//System.out.println("up");
 					escaped = findExit(row - 1, col);
-				} if (!escaped) {
-					System.out.println("left");
+				}
+				if (!escaped) {
+					//System.out.println("left");
 					escaped = findExit(row, col - 1);
 				}
 			}
 			if (escaped) {
-				if (row == -1 || col == -1) {
-					if ((foundRow != -1 && foundCol == -1) || (foundRow == -1 || foundCol != -1)) {
+					if (foundRow == -1) {
 						foundRow = row;
 						foundCol = col;
-					}
 				}
 			}
 		}

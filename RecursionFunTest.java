@@ -166,7 +166,6 @@ public class RecursionFunTest {
     intList.addLast(7);
     intList.addLast(3);
     intList.removeAll(3);
-      System.out.println(intList.get(0));
     assertEquals((Integer)5, intList.get(0));
     assertEquals((Integer)7, intList.get(1));  
   }
@@ -181,8 +180,6 @@ public class RecursionFunTest {
     list.duplicateAll("B");
     assertEquals("B", list.get(0));
     assertEquals("B", list.get(1));
-    System.out.println(list.get(1));
-    System.out.println(list.size());
     assertEquals(2, list.size());
   }
 
